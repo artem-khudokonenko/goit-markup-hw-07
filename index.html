@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.1" />
     <title>Document</title>
     <link
       rel="stylesheet"
@@ -46,11 +46,39 @@
             >
           </li>
         </ul>
+        <div class="container">
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+
+          <ul class="menu">
+            <li><a href="" class="link">About</a></li>
+            <li><a href="" class="link">Products</a></li>
+            <li><a href="" class="link">Contacts</a></li>
+            <li><a href="" class="link">Career</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
       <!-- Hero -->
-      <section class="section-hero section bg-hero">
+      <section class="section section-hero bg-hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button data-modal-open type="button" class="hero-button">
@@ -150,7 +178,7 @@
       <section class="section section-team">
         <div class="container">
           <h2 class="titel">Our Team</h2>
-          <ul class="list">
+          <ul class="team">
             <li class="list-team">
               <img
                 src="./images/main-page/people1.jpg"
@@ -159,7 +187,7 @@
                 height="260"
               />
               <div class="name-team">
-                <h3 class="subtitel">Mark Guerrero</h3>
+                <h3 class="name-surname">Mark Guerrero</h3>
                 <p class="subtitel-text">Product Designer</p>
                 <ul class="list">
                   <li class="item">
@@ -201,7 +229,7 @@
                 height="260"
               />
               <div class="name-team">
-                <h3 class="subtitel">Tom Ford</h3>
+                <h3 class="name-surname">Tom Ford</h3>
                 <p class="subtitel-text">Frontend Developer</p>
                 <ul class="list">
                   <li class="item">
@@ -243,7 +271,7 @@
                 height="260"
               />
               <div class="name-team">
-                <h3 class="subtitel">Camila Garcia</h3>
+                <h3 class="name-surname">Camila Garcia</h3>
                 <p class="subtitel-text">Marketing</p>
                 <ul class="list">
                   <li class="item">
@@ -285,7 +313,7 @@
                 height="260"
               />
               <div class="name-team">
-                <h3 class="subtitel">Daniel Wilson</h3>
+                <h3 class="name-surname">Daniel Wilson</h3>
                 <p class="subtitel-text">UI Designer</p>
                 <ul class="list">
                   <li class="item">
@@ -495,6 +523,37 @@
         </form>
       </div>
     </div>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="" class="link">About</a></li>
+        <li><a href="" class="link">Products</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+        <li><a href="" class="link">Career</a></li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
