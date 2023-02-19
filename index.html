@@ -132,26 +132,41 @@
           <ul class="list">
             <li class="list-work">
               <img
-                src="./images/main-page/Rectangle71.jpg"
+                srcset="
+                  ./images/main-page/doing@1x-2.jpg 1x,
+                  ./images/main-page/doing@2x-2.jpg 2x
+                "
+                src="./images/main-page/doing@1x-2.jpg"
                 alt="Monitor with graphs"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
             <li class="list-work">
               <img
-                src="./images/main-page/Rectangle72.jpg"
+                srcset="
+                  ./images/main-page/doing@1x-1.jpg 1x,
+                  ./images/main-page/doing@2x-1.jpg 2x
+                "
+                src="./images/main-page/doing@1x-1.jpg"
                 alt="Multifunctional phone"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
             <li class="list-work">
               <img
-                src="./images/main-page/Rectangle73.jpg"
+                srcset="
+                  ./images/main-page/doing@1x.jpg 1x,
+                  ./images/main-page/doing@2x.jpg 2x
+                "
+                src="./images/main-page/doing@1x.jpg"
                 alt="connection of the phone with the computer"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
           </ul>
@@ -163,12 +178,29 @@
           <h2 class="titel">Our Team</h2>
           <ul class="team">
             <li class="list-team">
-              <img
-                src="./images/main-page/people1.jpg"
-                alt="foto Mark Guerrero"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-page/imgimg-1@1x.webp 1x,
+                    ./images/main-page/imgimg-1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/main-page/imgimg-1@1x.jpg 1x,
+                    ./images/main-page/imgimg-1@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/main-page/imgimg-1@1x.jpg"
+                  alt="foto Mark Guerrero"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="name-team">
                 <h3 class="name-surname">Mark Guerrero</h3>
                 <p class="subtitel-text">Product Designer</p>
@@ -205,12 +237,29 @@
               </div>
             </li>
             <li class="list-team">
-              <img
-                src="./images/main-page/people2.jpg"
-                alt="foto Tom Ford"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-page/imgimg-2@1x.webp 1x,
+                    ./images/main-page/imgimg-2@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/main-page/imgimg-2@1x.jpg 1x,
+                    ./images/main-page/imgimg-2@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/main-page/imgimg-2@1x.jpg"
+                  alt="foto Tom Ford"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="name-team">
                 <h3 class="name-surname">Tom Ford</h3>
                 <p class="subtitel-text">Frontend Developer</p>
@@ -247,12 +296,29 @@
               </div>
             </li>
             <li class="list-team">
-              <img
-                src="./images/main-page/people3.jpg"
-                alt="foto Camila Garcia"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-page/imgimg-3@1x.webp 1x,
+                    ./images/main-page/imgimg-3@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/main-page/imgimg-3@1x.jpg 1x,
+                    ./images/main-page/imgimg-3@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/main-page/imgimg-3@1x.jpg"
+                  alt="foto Camila Garcia"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="name-team">
                 <h3 class="name-surname">Camila Garcia</h3>
                 <p class="subtitel-text">Marketing</p>
@@ -289,12 +355,29 @@
               </div>
             </li>
             <li class="list-team">
-              <img
-                src="./images/main-page/people4.jpg"
-                alt="foto Daniel Wilson"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-page/imgimg-4@1x.webp 1x,
+                    ./images/main-page/imgimg-4@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/main-page/imgimg-4@1x.jpg 1x,
+                    ./images/main-page/imgimg-4@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/main-page/imgimg-4@1x.jpg"
+                  alt="foto Daniel Wilson"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="name-team">
                 <h3 class="name-surname">Daniel Wilson</h3>
                 <p class="subtitel-text">UI Designer</p>
@@ -507,7 +590,7 @@
       </div>
     </div>
     <div class="menu-container js-menu-container">
-      <button class="menu-toggle js-close-menu">
+      <button class="menu-toggle js-close-menu" type="button">
         <svg class="menu-svg">
           <use href="./images/icons.svg#close"></use>
         </svg>
@@ -515,12 +598,14 @@
       <nav>
         <ul class="menu-nav">
           <li class="menu-item">
-            <a href="./index.html" class="nav-site">Studio</a>
+            <a href="./index.html" class="nav-site-menu">Studio</a>
           </li>
-          <li class="item">
-            <a href="./portfolio.html" class="nav-site">Portfolio</a>
+          <li class="menu-item">
+            <a href="./portfolio.html" class="nav-site-menu">Portfolio</a>
           </li>
-          <li class="item"><a href="" class="nav-site">Contacts</a></li>
+          <li class="menu-item">
+            <a href="" class="nav-site-menu color-aktiv">Contacts</a>
+          </li>
         </ul>
       </nav>
       <ul class="link-contacts-menu">
@@ -531,6 +616,36 @@
           <a href="mailto:info@devstudio.com" class="link-mail"
             >info@devstudio.com</a
           >
+        </li>
+      </ul>
+      <ul class="list-menu">
+        <li class="item">
+          <a href="" class="link">
+            <svg>
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="link">
+            <svg>
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="link">
+            <svg>
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="item">
+          <a href="" class="link">
+            <svg>
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>

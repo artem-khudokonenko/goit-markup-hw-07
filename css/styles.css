@@ -106,6 +106,7 @@ a {
 }
 .flex-header {
   display: flex;
+  position: relative;
 }
 .flex-logo-nav {
   display: flex;
@@ -177,10 +178,17 @@ a {
 @media screen and (min-width: 768px) {
   .link-contacts {
     display: flex;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     justify-content: end;
   }
 }
+@media screen and (min-width: 1200px) {
+  .link-contacts {
+    flex-direction: row;
+  }
+}
+
 .link-contacts a {
   display: block;
   padding-top: 24px;
@@ -188,11 +196,13 @@ a {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .link-contacts .link-tel {
-    padding-bottom: 0px;
-  }
-  .link-contacts .link-mail {
     padding-top: 4px;
     padding-bottom: 10px;
+    margin-right: 0;
+  }
+  .link-contacts .link-mail {
+    padding-top: 24px;
+    padding-bottom: 0;
   }
   .link-contacts a {
     font-weight: 400;
@@ -231,19 +241,73 @@ a {
   margin-right: auto;
   margin-left: auto;
   background-color: var(--modal-overlay);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-image: linear-gradient(
       to right,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/bg-hero.jpg);
-  background-position: center;
-  background-size: cover;
+    url(../images/phone-bg@1x.jpg);
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .bg-hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/phone-bg@2x.jpg);
+  }
+}
+@media screen and (min-width: 481px) {
+  .bg-hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tab-bg@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .bg-hero {
+      background-image: linear-gradient(
+          to right,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/tab-bg@2x.jpg);
+    }
+  }
 }
 @media screen and (min-width: 768px) {
   .bg-hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/desktop-bg1@1x.jpg);
     max-width: 768px;
     max-height: 436px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .bg-hero {
+      background-image: linear-gradient(
+          to right,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/desktop1-bg@2x.jpg);
+    }
   }
 }
 @media screen and (min-width: 1200px) {
@@ -418,7 +482,7 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .work-section {
-    display: contents;
+    display: block;
   }
 }
 .list-work {
@@ -993,7 +1057,7 @@ a {
   transition-property: background-color;
 }
 .checkbox {
-  width: 16px;
+  min-width: 16px;
   height: 16px;
   border: 1px solid var(--dark);
   border-radius: 2px;
@@ -1014,13 +1078,6 @@ a {
 }
 
 /* ! Menu */
-/* .page-header .container {
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
- */
 .modile {
   min-height: 80px;
   display: flex;
@@ -1085,11 +1142,13 @@ a {
 
 .menu-container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 32px;
+  padding: 40px;
   background-color: #ffffff;
   z-index: 2;
 
@@ -1103,11 +1162,16 @@ a {
 
 .menu-container .menu-toggle {
   position: absolute;
-  z-index: 3;
   display: block;
-
+  padding: 0;
   top: 24px;
   right: 24px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background: var(--accent);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .mobile-menu {
@@ -1125,6 +1189,60 @@ a {
 .menu-svg {
   width: 8px;
   height: 8px;
-  padding: 8px;
   fill: #000000;
+}
+.menu-nav {
+  padding-top: 40px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  color: var(--dark);
+}
+.menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.color-aktiv {
+  color: var(--pressed-state);
+}
+.link-contacts-menu {
+  margin-top: auto;
+  margin-bottom: 48px;
+}
+.link-contacts-menu li:not(:last-child) {
+  margin-bottom: 40px;
+}
+.link-contacts-menu .link-tel {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.11;
+  color: var(--primary-brand);
+  margin-right: 0;
+}
+.link-contacts-menu .link-mail {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.list-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.list-menu .link {
+  display: inline-flex;
+  border-radius: 50%;
+  background: #4d5ae5;
+  padding: 12px;
+  border-radius: 50%;
+  fill: var(--light);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-property: background-color;
+}
+
+.list-menu svg {
+  width: 40px;
+  height: 40px;
 }
