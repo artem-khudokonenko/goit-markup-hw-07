@@ -885,9 +885,8 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* min-width: 392px;
-  max-width: 480px; */
   width: 392px;
+  height: 586px;
   padding-top: 72px;
   padding-right: 24px;
   padding-bottom: 24px;
@@ -898,6 +897,17 @@ a {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%);
 }
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    height: 584px;
+  }
+}
+
 .modal-btn {
   position: absolute;
   display: flex;
