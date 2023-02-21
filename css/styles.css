@@ -1150,7 +1150,7 @@ a {
 
 .burger {
   width: 32px;
-  height: 32px;
+  height: 22px;
   fill: var(--modal-overlay);
 }
 @media (min-width: 768px) {
