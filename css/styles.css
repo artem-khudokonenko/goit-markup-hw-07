@@ -1176,7 +1176,7 @@ a {
   padding-top: 80px;
   background-color: #ffffff;
   z-index: 2;
-
+  overflow-y: scroll;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
@@ -1229,7 +1229,7 @@ a {
   color: var(--pressed-state);
 }
 .link-contacts-menu {
-  margin-top: auto;
+  margin-top: 284px;
   margin-bottom: 48px;
 }
 .link-contacts-menu li:not(:last-child) {
@@ -1252,7 +1252,7 @@ a {
 
 .list-menu {
   display: flex;
-  justify-content: space-between;
+  gap: 56px;
 }
 .list-menu .link {
   display: inline-flex;
